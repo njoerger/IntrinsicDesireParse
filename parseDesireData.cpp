@@ -6,12 +6,18 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/lexical_cast.hpp>
 #include "Reader.h"
+#include "PersonIntrinsic.h"
 
 using namespace std;
 
 bool checkCmdLineArg(int, char**);
 bool checkFileExists(string);
 
+void printInfo(std::vector<std::string> val){
+	for(int counter = 1; counter < val.size();counter++){
+		cout << endl<< val.at(counter) << endl;
+	}
+}
 int main(int argc, char ** argv){
 	if(!checkCmdLineArg(argc, argv)){
 		cout << "Usage: " << argv[0] << " \"number of columns\" delimit \"type of data (int, string, double)\" \"Header?(0,1)\" \"Total File Path\""<<endl;
@@ -27,16 +33,32 @@ int main(int argc, char ** argv){
 	Reader r (cols, delim, type, head, tfp);
 	
 	std::vector<Store *> testCases;
-	Store* s;
+	int counterme = 0;
 	while(r.hasNext()){
-		//have store vector
-		Store temp;
-		temp  = r.next();
-		s = &temp;
+		Store* s = new Store;
+		*s = r.next();
+		//cout <<" In dis loop: " << temp.getVectorString().size()<<endl;
 		testCases.push_back(s);
+		
+		//cout <<testCases.at(counterme++)->sizeMe() <<endl;
+		//cout<< testCases.at(testCases.size())->getVectorString().size() <<endl;
 	}
 /*
 */
+	std::vector<PersonIntrinsic *> person;
+	for (int counter = 1; counter < testCases.size(); counter++){
+		//cout << "This one's size: " <<testCases.size() <<endl;
+		std::vector<std::string> localVar;
+		Store *temporary;
+
+		temporary = testCases.at(counter);
+		localVar = temporary->getVectorString();
+		//cout << "That one's size: " << localVar.size()<<endl;
+
+		//printInfo(localVar);
+		PersonIntrinsic temp1(localVar);
+		cout << "Case finished" <<endl;
+	}
 	//store into another array =calc static method(pass vector)
 
 	//print/write

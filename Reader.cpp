@@ -58,7 +58,7 @@ Store Reader::next(){
 		}
 	}
 }
-void Reader::parseDelimiters(string lineToParse, vector<string> toStore){
+void Reader::parseDelimiters(string lineToParse, vector<string> & toStore){
 	//cout << lineToParse<<endl;
 	boost::split(toStore, lineToParse, boost::is_any_of(delimit.c_str()));
 /*

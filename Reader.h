@@ -1,4 +1,5 @@
-#ifndef READER_H
+#ifndef _READER_H
+#define _READER_H
 #include <fstream>
 #include "Store.h"
 #include <vector>
@@ -26,6 +27,6 @@ class Reader{
 		bool setInformation(boost::tuple<int, bool, bool, std::string, std::string, std::string>);
 */
 
-		void parseDelimiters(std::string, std::vector<std::string>);
+		void parseDelimiters(std::string, std::vector<std::string> &);
 };
 #endif
