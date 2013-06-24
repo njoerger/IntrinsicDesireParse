@@ -57,7 +57,7 @@ int main(int argc, char ** argv){
 
 		//printInfo(localVar);
 		PersonIntrinsic temp1(localVar);
-		cout << "Case finished" <<endl;
+		//cout << "Case finished" <<endl;
 	}
 	//store into another array =calc static method(pass vector)
 

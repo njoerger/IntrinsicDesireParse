@@ -11,6 +11,7 @@ class PersonIntrinsic{
 		double calcTotal(int, int, int, int, int, bool);
 		double calcTotal(int, int, int, int, int, int, bool);
 		double calcTotal(int, int, int, int, int, int, int);
+		void setHighest();
 		std::string role, age, sex, date, motivator;
 		double powerValue, independenceValue, curiosityValue, acceptanceValue, orderValue, savingValue, honorValue, idealismValue, socialContactValue, familyValue, statusValue, vengeanceValue, eatingValue, physicalActivityValue, tranquilityValue, motivatorValue;
 		//romanceValue;
