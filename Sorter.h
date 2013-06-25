@@ -3,27 +3,26 @@
 #include <vector>
 #include <string>
 #include "PersonIntrinsic.h"
+#include <map>
 
-//typedef std::unordered_map<std::string,int> IntrinsicValues;
 
 class Sorter{
 	private:
-/*
-		IntrinsicValues studentValues;
-		IntrinsicValues staffValues;
-		IntrinsicValues neitherValues;
-		IntrinsicValues otherValues;
-*/
-		
-		int studentValues [16] = {0};
-		int staffValues[16] = {0};
-		int  neitherValues[16] = {0};
-		int otherValues[16] = {0};
+		multimap<int, std::string> student;
+		multimap<int, std::string> staff;
+		multimap<int, std::string> neither;
+		multimap<int, std::string> other;
+
+		int studentValues [15] = {0};
+		int staffValues[15] = {0};
+		int  neitherValues[15] = {0};
+		int otherValues[15] = {0};
+		std::string namesOfValues[15] ={""};
 	public:
 		Sorter();
 		~Sorter();
 		Sorter(std::vector<PersonIntrinsic *> & );
-//		bool setValue(IntrinsicValues &, std::string, int);
 		void print();
+		void fillNames();
 };
 #endif

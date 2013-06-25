@@ -62,7 +62,6 @@ int main(int argc, char ** argv){
 		person.push_back(temp1);
 	}
 	//store into another array =calc static method(pass vector)
-	cout <<"outside: "<<person.size()<<endl;
 	Sorter sort(person);
 
 	//print/write
