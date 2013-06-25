@@ -7,6 +7,7 @@
 #include <boost/lexical_cast.hpp>
 #include "Reader.h"
 #include "PersonIntrinsic.h"
+#include "Sorter.h"
 
 using namespace std;
 
@@ -56,12 +57,16 @@ int main(int argc, char ** argv){
 		//cout << "That one's size: " << localVar.size()<<endl;
 
 		//printInfo(localVar);
-		PersonIntrinsic temp1(localVar);
+		PersonIntrinsic * temp1 = new PersonIntrinsic(localVar);
 		//cout << "Case finished" <<endl;
+		person.push_back(temp1);
 	}
 	//store into another array =calc static method(pass vector)
+	cout <<"outside: "<<person.size()<<endl;
+	Sorter sort(person);
 
 	//print/write
+	sort.print();
 
 	return 0;
 }
