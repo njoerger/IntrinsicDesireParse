@@ -6,14 +6,22 @@
 class PersonIntrinsic{
 	private:
 		int inverseValue(int);
-		bool setMotivator(double);
-		double calcTotal(int, int, int, int);
-		double calcTotal(int, int, int, int, int, bool);
-		double calcTotal(int, int, int, int, int, int, bool);
-		double calcTotal(int, int, int, int, int, int, int);
+		bool setMotivator(int);
+		int calcTotal(int, int, int, int);
+		//int calcTotal(int, int, int, int, std::vector<int>);
+		int calcTotal(int, int, int, int, int, bool);
+		//int calcTotal(int, int, int, int, int, bool, std::vector<int>);
+		int calcTotal(int, int, int, int, int, int, bool);
+		//int calcTotal(int, int, int, int, int, int, bool, std::vector<int>);
+		int calcTotal(int, int, int, int, int, int, int);
+		//int calcTotal(int, int, int, int, int, int, int, std::vector<int>);
 		void setHighest();
 		std::string role, age, sex, date, motivator;
-		double powerValue, independenceValue, curiosityValue, acceptanceValue, orderValue, savingValue, honorValue, idealismValue, socialContactValue, familyValue, statusValue, vengeanceValue, eatingValue, physicalActivityValue, tranquilityValue, motivatorValue;
+
+		int powerValue, independenceValue, curiosityValue, acceptanceValue, orderValue, savingValue, honorValue, idealismValue, socialContactValue, familyValue, statusValue, vengeanceValue, eatingValue, physicalActivityValue, tranquilityValue, motivatorValue;
+/*
+		std::vector<int> power, independence, curiosity, acceptance, order, saving, honor, idealism, socialContact, family, status, vengeance, eating, physicalActivity, tranquility, motivator;
+*/
 		//romanceValue;
 	public:
 		PersonIntrinsic();
@@ -45,23 +53,24 @@ class PersonIntrinsic{
 		std::string getRole();
 		std::string getAge();
 		std::string getSex();
-		double getPower();
-		double getIndepedence();
-		double getCuriosity();
-		double getAcceptance();
-		double getOrder();
-		double getSaving();
-		double getHonor();
-		double getIdealism();
-		double getSocialContact();
-		double getFamily();
-		double getStatus();
-		double getVengeance();
-//		double getRomance();
-		double getEating();
-		double getPhysicalActivity();
-		double getTranquility();
-		double getMotivatorValue();
+		int getPower();
+		int getIndepedence();
+		int getCuriosity();
+		int getIdealism();
+		int getAcceptance();
+		int getOrder();
+		int getSocialContact();
+		int getSaving();
+		int getHonor();
+		int getFamily();
+		int getStatus();
+		int getVengeance();
+//		int getRomance();
+		int getEating();
+		int getPhysicalActivity();
+		int getTranquility();
+		int getMotivatorValue();
 		std::string getMotivator();
+		std::vector<int> getAllVector();
 };
 #endif

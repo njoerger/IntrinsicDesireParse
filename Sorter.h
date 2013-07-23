@@ -13,11 +13,11 @@ class Sorter{
 		multimap<int, std::string> neither;
 		multimap<int, std::string> other;
 
-		int studentValues [15] = {0};
-		int staffValues[15] = {0};
-		int  neitherValues[15] = {0};
-		int otherValues[15] = {0};
-		std::string namesOfValues[15] ={""};
+		int studentValues [45] = {0};
+		int staffValues[45] = {0};
+		int  neitherValues[45] = {0};
+		int otherValues[45] = {0};
+		std::string namesOfValues[45] ={""};
 	public:
 		Sorter();
 		~Sorter();
