@@ -308,79 +308,79 @@ bool PersonIntrinsic::setDate(std::string dateNum){
 }
 bool PersonIntrinsic::setPower(int very1, int very2, int very3, int less1, int less2){
 	bool temp= 1;
-	powerValue = calcTotal(very1, very2, very3, inverseValue(less1), inverseValue(less2), temp);
+	powerValue = calcTotal(very1, very2, very3, less1, less2, temp);
 	//calcTotal(very1, very2, very3, inverseValue(less1), inverseValue(less2), temp, power);
 	//cout << "power value: " <<powerValue<<endl;
 	return true;
 }
 bool PersonIntrinsic::setIndependence(int very1, int very2, int less1, int less2){
-	independenceValue = calcTotal(very1, very2, inverseValue(less1), inverseValue(less2));
+	independenceValue = calcTotal(very1, very2, less1, less2);
 	//calcTotal(very1, very2, inverseValue(less1), inverseValue(less2), independence);
 	//cout << "independence value: " << independenceValue <<endl;
 	return true;
 }
 bool PersonIntrinsic::setCuriosity(int very1, int very2, int very3, int less1, int less2){
 	bool temp= 1;
-	curiosityValue = calcTotal(very1, very2, very3, inverseValue(less1), inverseValue(less2), temp);
+	curiosityValue = calcTotal(very1, very2, very3, less1, less2, temp);
 	//calcTotal(very1, very2, very3, inverseValue(less1), inverseValue(less2), temp, curiosity);
 	//cout << "curiosity value: " <<curiosityValue<<endl;
 	return true;
 }
 bool PersonIntrinsic::setAcceptance(int very1, int very2, int very3, int less1, int less2){
 	bool temp= 1;
-	acceptanceValue = calcTotal(very1, very2, very3, inverseValue(less1), inverseValue(less2), temp);
+	acceptanceValue = calcTotal(very1, very2, very3, less1, less2, temp);
 	//calcTotal(very1, very2, very3, inverseValue(less1), inverseValue(less2), temp, acceptance);
 	//cout << "Acceptance value " <<acceptanceValue <<endl;
 	return true;
 }
 bool PersonIntrinsic::setOrder(int very1, int very2, int less1, int less2){
-	orderValue = calcTotal(very1, very2, inverseValue(less1), inverseValue(less2));
+	orderValue = calcTotal(very1, very2, less1, less2);
 	//calcTotal(very1, very2, inverseValue(less1), inverseValue(less2), order);
 	//cout << "order value: " << orderValue <<endl;
 	return true;
 }
 bool PersonIntrinsic::setSaving(int very1, int very2, int very3, int less1, int less2){
 	bool temp= 1;
-	savingValue = calcTotal(very1, very2, very3, inverseValue(less1), inverseValue(less2), temp);
+	savingValue = calcTotal(very1, very2, very3, less1, less2, temp);
 	//calcTotal(very1, very2, very3, inverseValue(less1), inverseValue(less2), temp, saving);
 	//cout << "saving Value: " << savingValue <<endl;
 	return true;
 }
 bool PersonIntrinsic::setHonor(int very1, int very2, int less1, int less2){
-	honorValue = calcTotal(very1, very2, inverseValue(less1), inverseValue(less2));
+	honorValue = calcTotal(very1, very2, less1, less2);
 	//calcTotal(very1, very2, inverseValue(less1), inverseValue(less2), honor);
 	//cout << "honor value: " << honorValue <<endl;
 	return true;
 }
 bool PersonIntrinsic::setIdealism(int very1, int very2, int very3, int less1, int less2){
 	bool temp= 1;
-	idealismValue = calcTotal(very1, very2, very3, inverseValue(less1), inverseValue(less2), temp);
+	idealismValue = calcTotal(very1, very2, very3, less1, less2, temp);
 	//calcTotal(very1, very2, very3, inverseValue(less1), inverseValue(less2), temp, idealism);
 	//cout << "idealism value: " << idealismValue <<endl;
 	return true;
 }
 bool PersonIntrinsic::setSocialContact(int very1, int very2, int less1, int less2, int less3){
 	bool temp= 0;
-	socialContactValue = calcTotal(very1, very2, inverseValue(less1), inverseValue(less2), inverseValue(less3), temp);
+	socialContactValue = calcTotal(very1, very2, less1, less2, less3, temp);
 	//calcTotal(very1, very2, inverseValue(less1), inverseValue(less2), inverseValue(less3), temp, socialContact);
 	//cout << "social contact value: " << socialContactValue<<endl;
 	return true;
 }
 bool PersonIntrinsic::setFamily(int very1, int very2, int less1, int less2){
-	familyValue = calcTotal(very1, very2, inverseValue(less1), inverseValue(less2));
+	familyValue = calcTotal(very1, very2, less1, less2);
 	//calcTotal(very1, very2, inverseValue(less1), inverseValue(less2), family);
 	//cout << "family value: " <<familyValue <<endl;
 	return true;
 }
 bool PersonIntrinsic::setStatus(int very1, int very2, int very3, int less1, int less2, int less3){
 	bool temp= 1;
-	statusValue = calcTotal(very1, very2,very3, inverseValue(less1), inverseValue(less2), inverseValue(less3), temp);
+	statusValue = calcTotal(very1, very2, very3, less1, less2, temp);
 	//calcTotal(very1, very2,very3, inverseValue(less1), inverseValue(less2), inverseValue(less3), temp, status);
 	//cout << "status value: " << statusValue << endl;
 	return true;
 }
 bool PersonIntrinsic::setVengeance(int very1, int very2, int very3, int very4, int less1, int less2, int less3){
-	vengeanceValue = calcTotal(very1, very2,very3, very4, inverseValue(less1), inverseValue(less2), inverseValue(less3));
+	vengeanceValue = calcTotal(very1, very2,very3, very4, less1, less2, less3);
 	//calcTotal(very1, very2,very3, very4, inverseValue(less1), inverseValue(less2), inverseValue(less3), vengeance);
 	//cout << "vengeance value: " <<vengeanceValue <<endl;
 	return true;
@@ -391,20 +391,20 @@ bool PersonIntrinsic::setRomance(int, int, int, int, int, int){
 }
 */
 bool PersonIntrinsic::setEating(int very1, int very2, int less1, int less2){
-	eatingValue = calcTotal(very1, very2, inverseValue(less1), inverseValue(less2));
+	eatingValue = calcTotal(very1, very2, less1, less2);
 	//calcTotal(very1, very2, inverseValue(less1), inverseValue(less2), eating);
 	//cout << "eating value: " <<eatingValue <<endl;
 	return true;
 }
 bool PersonIntrinsic::setPhysicalActivity(int very1, int very2, int less1, int less2){
-	physicalActivityValue = calcTotal(very1, very2, inverseValue(less1), inverseValue(less2));
+	physicalActivityValue = calcTotal(very1, very2, less1, less2);
 	//calcTotal(very1, very2, inverseValue(less1), inverseValue(less2), physicalActivity);
 	//cout << "physical activity value: " << physicalActivityValue <<endl;
 	return true;
 }
 bool PersonIntrinsic::setTranquility(int very1, int very2, int very3, int less1, int less2){
 	bool temp= 1;
-	tranquilityValue = calcTotal(very1, very2, very3, inverseValue(less1), inverseValue(less2), temp);
+	tranquilityValue = calcTotal(very1, very2, very3, less1, less2, temp);
 	//calcTotal(very1, very2, very3, inverseValue(less1), inverseValue(less2), temp, tranquility);
 	//cout << "tranquility value: " << tranquilityValue<<endl;
 	return true;
@@ -482,29 +482,69 @@ int PersonIntrinsic::inverseValue(int valueToFlip){
 }
 //int PersonIntrinsic::calcTotal(int very1, int very2, int less1, int less2, std::vector<int> tempVec){
 int PersonIntrinsic::calcTotal(int very1, int very2, int less1, int less2){
-/*
-	tempVec.push_back((very1+very2));
-	tempVec.push_back((less1+less2));
-	if(tempVec.size() == 2)
-		return true;
+	int positive = very1 + very2;
+	int negative = less1 + less2;
+
+	if((positive == negative) && (positive > 0))
+		return 0;
+	else if ((positive > 0) && (negative == 0))
+		return 1;
+	else if ((negative > 0) && (positive == 0))
+		return -1;
 	return false;
-*/
-	return (very1 + very2 + less1 + less2);
 }
 //int PersonIntrinsic::calcTotal(int very1, int very2, int flip, int less1, int less2, bool whichFirst, std::vector<int> tempVec){
 int PersonIntrinsic::calcTotal(int very1, int very2, int flip, int less1, int less2, bool whichFirst){
-/*
-	if (flip)
-		tempVec.push_back
-*/
-	return (very1 +very2 + flip + less1 + less2);
+	int positive;
+	int negative;
+	if (whichFirst){
+		positive = very1 + very2 + flip;
+		negative = less1 + less2;
+	}
+	else{
+		positive = very1 + very2;
+		negative = less1 + less2 + flip;
+	}
+
+	if((positive == negative) && (positive > 0))
+		return 0;
+	else if ((positive > 0) && (negative == 0))
+		return 1;
+	else if ((negative > 0) && (positive == 0))
+		return -1;
+	return false;
 }
 int PersonIntrinsic::calcTotal(int very1, int very2, int flip1, int flip2, int less1, int less2, bool whichFirst){
-	//cout <<endl << endl <<(very1 +very2 + flip1 + flip2 + less1 + less2) <<endl <<endl;
-	return (very1 +very2 + flip1 + flip2 + less1 + less2);
+	int positive;
+	int negative;
+	if (whichFirst){
+		positive = very1 + very2 + flip1 + flip2;
+		negative = less1 + less2;
+	}
+	else{
+		positive = very1 + very2;
+		negative = less1 + less2 + flip1 + flip2;
+	}
+
+	if((positive == negative) && (positive > 0))
+		return 0;
+	else if ((positive > 0) && (negative == 0))
+		return 1;
+	else if ((negative > 0) && (positive == 0))
+		return -1;
+	return false;
 }
 int PersonIntrinsic::calcTotal(int very1, int very2, int very3, int very4, int less1, int less2, int less3){
-	return (very1 +very2 + very3 + very4 + less1 + less2 + less3);
+	int positive = very1 + very2 + very3 + very4;
+	int negative = less1 + less2 + less3;
+
+	if((positive == negative) && (positive > 0))
+		return 0;
+	else if ((positive > 0) && (negative == 0))
+		return 1;
+	else if ((negative > 0) && (positive == 0))
+		return -1;
+	return false;
 }
 //need to set motivatorValue and name for highest value
 bool PersonIntrinsic::setMotivator(int val){
