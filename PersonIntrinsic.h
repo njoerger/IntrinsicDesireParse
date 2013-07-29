@@ -1,3 +1,10 @@
+/**
+  * @Author Nicholas Joerger
+  * @Version 1.0
+  * @License GPL V3.0
+  * @Comment
+  *    Please use to the full extent of the GPL, if used with other projects not associated with GitHub, please email me at my GitHub email.
+ */
 #ifndef _PERSONINTRINSIC_H
 #define _PERSONINTRINSIC_H
 #include <string>
@@ -5,23 +12,14 @@
 
 class PersonIntrinsic{
 	private:
-		int inverseValue(int);
-		bool setMotivator(int);
 		int calcTotal(int, int, int, int);
-		//int calcTotal(int, int, int, int, std::vector<int>);
 		int calcTotal(int, int, int, int, int, bool);
-		//int calcTotal(int, int, int, int, int, bool, std::vector<int>);
 		int calcTotal(int, int, int, int, int, int, bool);
-		//int calcTotal(int, int, int, int, int, int, bool, std::vector<int>);
 		int calcTotal(int, int, int, int, int, int, int);
-		//int calcTotal(int, int, int, int, int, int, int, std::vector<int>);
 		void setHighest();
 		std::string role, age, sex, date, motivator;
 
 		int powerValue, independenceValue, curiosityValue, acceptanceValue, orderValue, savingValue, honorValue, idealismValue, socialContactValue, familyValue, statusValue, vengeanceValue, eatingValue, physicalActivityValue, tranquilityValue, motivatorValue;
-/*
-		std::vector<int> power, independence, curiosity, acceptance, order, saving, honor, idealism, socialContact, family, status, vengeance, eating, physicalActivity, tranquility, motivator;
-*/
 		//romanceValue;
 	public:
 		PersonIntrinsic();
@@ -48,7 +46,6 @@ class PersonIntrinsic{
 		bool setEating(int, int, int, int);
 		bool setPhysicalActivity(int, int, int, int);
 		bool setTranquility(int, int, int, int, int);
-		bool getMotivatorValue(int);
 
 		std::string getRole();
 		std::string getAge();

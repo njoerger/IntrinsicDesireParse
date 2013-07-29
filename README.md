@@ -9,4 +9,3 @@ Future Features
 ====================
 
 generic super/sub type for "sort by"
-fix memory leaks
